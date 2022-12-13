@@ -135,6 +135,6 @@ metal/perchase_list.htmlの内容をコピーし編集
 
 [4]./stock/index.htmlに株券買取履歴のリンク挿入
 
-[5]models.pyとの関連付け
-stock.views.pyはmodels.pyのStockPurcaseクラスを参照させる<br>
-from stock.models import Stock,StockPurchase(StockPurcahseクラスの追加）<br>
+[5]models.pyとの関連付け  
+stock.views.pyはmodels.pyのStockPurcaseクラスを参照させる  
+from stock.models import Stock,StockPurchase(StockPurcahseクラスの追加)  
