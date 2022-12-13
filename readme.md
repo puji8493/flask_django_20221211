@@ -118,3 +118,19 @@ windows環境で作成した場合は、テキストエディタ等で開いて 
 ### 2022/12/11 08:00
 
 django-debug-toolbar を導入しました。  
+
+
+### 2022/12/11
+行ったこと
+
+株の取引記録ページの作成
+http://127.0.0.1:8000/stock/purchase_list/
+
+[1] Templates/stock/perchase_list.html作成
+metal/perchase_list.htmlの内容をコピーし編集
+
+[2]./stock/url.py urlpatternsにpurchase_listを追加
+
+[3]./stock/veiws.py class StockPurchaseList(View):作成
+
+[4]./stock/index.htmlに株券買取履歴のリンク挿入
