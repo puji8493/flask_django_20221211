@@ -128,10 +128,20 @@ http://127.0.0.1:8000/stock/purchase_list/
 
 [1] Templates/stock/perchase_list.html作成
 metal/perchase_list.htmlの内容をコピーし編集
+object_listと指定した上で、データベースを一個一個取り出してそれを都度for文でitemを入れていき、表示  
+itemオブジェクト.models.pyで定義した変数を属性と指定する
 
 [2]./stock/url.py urlpatternsにpurchase_listを追加
 
 [3]./stock/veiws.py class StockPurchaseList(View):作成
+クラスベースビュー(Class Based View)  　
+StockPurchaseList(View)を作成  
+
+getリクエストなら、モデルクラスStockPurchaseのクラスデータのうち、stock(銘柄名）を変数（purchase_list）に格納する  
+context = {'purchase_list': purchase_list}  
+dict: contextという辞書に格納  
+renderメソッド 指定したテンプレートにコンテキスト（辞書型データ）を反映し、レンダリングしたHttpResponseオブジェクトを返す  
+return render(request, 'stock/purchase_list.html', context)  
 
 [4]./stock/index.htmlに株券買取履歴のリンク挿入
 
